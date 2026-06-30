@@ -235,14 +235,23 @@ def build_doc(img_path):
     bullet(doc, "Most scary: Gatekeeper Web")
     bullet(doc, "What we'd do: learn discovery strategy, not only classic SEO; measure more than clicks")
 
-    heading(doc, "Video timing cheat sheet")
+    heading(doc, "Video timing cheat sheet (balanced speakers)")
     timing = [
-        ("0:00-1:30", "Emran", "Intro, purpose, Chermack"),
-        ("1:30-5:00", "Arshi + Ashik", "STEEP, Givens, Drivers"),
-        ("5:00-7:00", "Ozlem", "Interviews"),
-        ("7:00-8:00", "Emran", "Show matrix image, explain axes"),
-        ("8:00-12:20", "All four scenarios", "About 1 min each"),
-        ("12:20-15:00", "Everyone", "Reflection + thanks"),
+        ("0:00-0:45", "Emran", "Slide 1 - Title"),
+        ("0:45-1:30", "Wasay", "Slide 2 - Hook"),
+        ("1:30-2:15", "Arshi", "Slide 3 - Purpose"),
+        ("2:15-3:00", "Ashik", "Slide 4 - Methodology"),
+        ("3:00-3:45", "Wasay", "Slide 5 - System"),
+        ("3:45-5:00", "Arshi", "Slide 6 - STEEP"),
+        ("5:00-6:30", "Ashik", "Slides 7-8 - Givens, Data"),
+        ("6:30-8:30", "Ozlem", "Slides 9-11 - Interviews + section"),
+        ("8:30-9:30", "Emran", "Slide 12 - Matrix"),
+        ("9:30-10:15", "Arshi", "Slide 13 - Citation Economy"),
+        ("10:15-11:00", "Ashik", "Slide 14 - Last-Click Web"),
+        ("11:00-11:45", "Ozlem", "Slide 15 - Gatekeeper Web"),
+        ("11:45-12:30", "Wasay", "Slides 16-17 - Slow Adaptation + section"),
+        ("12:30-14:00", "Emran + all", "Slide 18 - Reflection"),
+        ("14:00-15:00", "Emran", "Slide 19 - Thank you"),
     ]
     t = doc.add_table(rows=1, cols=3)
     t.style = "Table Grid"
@@ -255,7 +264,8 @@ def build_doc(img_path):
 
     doc.add_paragraph()
     heading(doc, "Before we record - checklist")
-    bullet(doc, "All 5 faces on screen at least once")
+    bullet(doc, "See SPEAKER_ASSIGNMENTS.md for full slide-by-slide list")
+    bullet(doc, "Speaker badge shows top-right on each slide in the deck")
     bullet(doc, "Say out loud: Funda pushed us up/right, Lorena kept hybrid/website")
     bullet(doc, "Do not read slides word for word")
     bullet(doc, "Matrix slide: pause, point at the four boxes")

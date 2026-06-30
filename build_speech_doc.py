@@ -48,112 +48,99 @@ def build():
     say(doc, "Read this like you talk, not like an essay. Pause at the matrix. About 15 minutes total. All five of us speak.")
     doc.add_paragraph()
 
-    # EMRAN
-    who(doc, "EMRAN", "0:00 - 1:30")
-    slide(doc, "Slide 1 - Title. Everyone on camera if you can.")
+    say(doc, "Balanced speakers: 4 slides each (Arshi 3 + reflection line). Names show top-right on each slide. See SPEAKER_ASSIGNMENTS.md.")
+    doc.add_paragraph()
+
+    # SLIDE 1
+    who(doc, "EMRAN", "0:00 - 0:45")
+    slide(doc, "Slide 1 - Title. Everyone on camera.")
     say(doc, "Hey. We're Team 14. I'm Emran. With me are Arshi, Ashik, Ozlem, and Wasay.")
-    say(doc, "Our topic is Brief B: SEO in the Age of AI. Horizon 2035.")
-    say(doc, "Quick thing up front. We're not here to predict the future. Our professor didn't ask for that. Chermack's whole method is: the future is uncertain, so build a few different versions of it and ask what you'd do in each one. That's what we did.")
+    say(doc, "Brief B: SEO in the Age of AI. Horizon 2035. We're not predicting one future — Chermack's method is build a few versions and ask what you'd do in each.")
+
+    # SLIDE 2
+    who(doc, "WASAY", "0:45 - 1:30")
+    slide(doc, "Slide 2 - Hook")
+    say(doc, "Wasay. Picture this: you Google something. The AI answer is already there. You never click. That's not twenty-thirty-five. That's now. Sixty percent of EU searches end with no click to any website.")
+    say(doc, "Our question: what happens to organic discoverability when AI answers the query and the brand never gets the visit?")
+
+    # SLIDE 3
+    who(doc, "ARSHI", "1:30 - 2:15")
     slide(doc, "Slide 3 - Purpose")
-    say(doc, "Who cares about this? Brand people. Agencies. Publishers. B2B marketers. Anyone who still has to explain a budget when half the room thinks SEO is dead and the other half thinks nothing changed.")
-    say(doc, "By 2035 they'll need to decide: do we still pay for classic SEO? Do we optimize to show up inside ChatGPT answers? Do we even measure clicks anymore?")
-    say(doc, "That's phase one in Chermack. Preparation. Purpose. Wasay drew the system picture on the next slides. I'll keep it short: the core problem is getting found when AI sits between you and the customer.")
-    say(doc, "Arshi and Ashik did the research scan. Ozlem talked to real people. I'll come back for the matrix and the wrap-up.")
+    say(doc, "Arshi. Who cares? Brand teams. Agencies. Publishers. B2B marketers. Anyone defending a budget when half the room thinks SEO is dead and half thinks nothing changed.")
+    say(doc, "By 2035 they need to decide: classic SEO? Citations inside ChatGPT? Metrics beyond clicks? That's Chermack phase one — preparation.")
 
-    # ARSHI
-    who(doc, "ARSHI", "1:30 - 3:00")
+    # SLIDE 4
+    who(doc, "ASHIK", "2:15 - 3:00")
+    slide(doc, "Slide 4 - Methodology")
+    say(doc, "Ashik. Three phases. Prep: purpose and system. Explore: STEEP plus interviews, split Givens from Drivers. Build: two axes, four scenarios, early warnings.")
+
+    # SLIDE 5
+    who(doc, "WASAY", "3:00 - 3:45")
+    slide(doc, "Slide 5 - System picture")
+    say(doc, "Back to me for the system. Brands, agencies, publishers, platforms, users — AI sits in the middle of discovery. The core problem: getting found when something else answers first.")
+
+    # SLIDE 6
+    who(doc, "ARSHI", "3:45 - 5:00")
     slide(doc, "Slide 6 - STEEP")
-    say(doc, "Hey, Arshi. So Ashik and I both did STEEP research and honestly there was overlap. We merged it into one table so we're not saying the same SparkToro number four times.")
-    say(doc, "Social side: zero-click is already normal. In the EU, SparkToro says about sixty percent of Google searches end with no click to any website. Out of a thousand searches, only three hundred seventy-four send someone to the open web. That's not a prediction. That's what's happening now.")
-    say(doc, "Tech side: SISTRIX looked at over a hundred million keywords in Germany. AI Overviews show up on roughly twenty percent of searches. Long-tail, it's closer to thirty. And most of the time the AI box is above the normal number one result.")
-    say(doc, "Economics: it hits publishers and how-to sites harder than e-commerce or local business. Political: AI Overviews reach billions of people, so regulators are watching. Environment: AI search burns more energy than old-school search. That might slow things down later. Might not.")
-    say(doc, "Ashik will explain what we tagged as Given versus Driver. That's the part that actually builds the matrix.")
+    say(doc, "Arshi again. Ashik and I merged our STEEP scan. Social: zero-click is normal — SparkToro, fifty-nine point seven percent EU, three seventy-four per thousand reach the open web.")
+    say(doc, "Tech: SISTRIX Germany, AI Overviews on roughly twenty percent of searches. Economics hits publishers hardest. Political: billions see Overviews, regulators watch. Environment: AI search uses more energy.")
 
-    # ASHIK
-    who(doc, "ASHIK", "3:00 - 5:00")
+    # SLIDE 7-8
+    who(doc, "ASHIK", "5:00 - 6:30")
     slide(doc, "Slides 7-8 - Givens, Drivers, Data")
-    say(doc, "Ashik here. Givens versus Drivers. Simple version.")
-    say(doc, "A Given is something already true enough that every future story has to start with it. Zero-click behaviour. AI Overviews live in Google Germany. Three hundred seventy-four clicks per thousand in the EU. Two billion people can see AI Overviews. You don't scenario-plan whether those exist. You plan inside them.")
-    say(doc, "A Driver is something that could go different ways. Gartner says search volume might drop twenty-five percent by twenty-twenty-six. Maybe faster, maybe slower. When an Overview shows, click-through on number one crashes from twenty-seven to eleven percent. Will that spread to every industry? Unclear. Small publishers already down a lot on search traffic. Axios wrote about that.")
-    say(doc, "We fought a bit on the tags. Good. If everything's a Given, you have no matrix. If everything's a Driver, it's noise.")
-    say(doc, "One number slide worth remembering: sixty-four percent of question-type searches trigger AI Overviews in one big study. And eleven percent of AI claims weren't fully supported by the sources cited. Regulation might get stricter because of stuff like that.")
-    say(doc, "Ozlem's interviews matter here because stats don't tell you how people actually behave at work.")
+    say(doc, "Ashik. Givens = already true in every scenario. Zero-click. Overviews in Germany. Two billion AIO users. Drivers = could go different ways — Gartner minus twenty-five percent, CTR crash when Overview shows, publisher attrition.")
+    say(doc, "If everything's a Given, no matrix. If everything's a Driver, it's noise. Sixty-four percent of question searches trigger Overviews in one study. Eleven percent of AI claims weren't fully supported — regulation may tighten.")
 
-    # OZLEM
-    who(doc, "OZLEM", "5:00 - 7:00")
-    slide(doc, "Slides 9-10 - Funda and Lorena")
-    say(doc, "Ozlem. I did two interviews, about ten minutes each, with people from other teams.")
-    say(doc, "First, Funda Aydin. She works in B2B marketing at GEA Digital. I asked what she opens first when she needs info for work. She said ChatGPT. Not Google. She told me that's changed over the last two years.")
-    say(doc, "She said something we put on the slide: visibility is less about ranking number one and more about being a source AI keeps using. She still thinks B2B needs serious technical content somewhere. But that somewhere might not need a click.")
-    say(doc, "And her worry? A few AI platforms deciding who gets seen. She said that plainly. We remembered it.")
-    say(doc, "Second person, Lorena Contreras. Community manager, some SEO background. Different story. Google is still her first move when she knows what she wants. ChatGPT helps her write and organize. Not replace search.")
-    say(doc, "She's seen Google put the answer on top and the company that wrote the content gets no visit. She thinks SEO is still there in twenty-thirty-five but it's credibility, structure, expert stuff. Not keyword blogs. She wouldn't pay for generic articles AI can copy.")
-    say(doc, "So Funda and Lorena aren't debating who's right. They're both right for different people and different tasks. Emran's gonna show how that became our matrix.")
+    # SLIDE 9-11
+    who(doc, "OZLEM", "6:30 - 8:30")
+    slide(doc, "Slides 9-11 - Funda, Lorena, section handoff")
+    say(doc, "Ozlem. Two interviews, ten minutes each. Funda Aydin, B2B marketing GEA Digital: opens ChatGPT first, not Google. Visibility is being cited by AI, not ranking number one. Fears a few platforms as gatekeepers.")
+    say(doc, "Lorena Contreras, community manager, SEO background: Google first for known intent, ChatGPT for writing. Your content can build the AI answer with no visit. SEO survives as credibility and expert content, not keyword blogs.")
+    say(doc, "They're both right for different people. Next section: four scenarios from those tensions.")
 
-    # EMRAN MATRIX
-    who(doc, "EMRAN", "7:00 - 8:15")
-    slide(doc, "Slide 12 - 2x2 matrix image. SLOW DOWN HERE.")
-    say(doc, "Back to me. Phase three. Development. This is the slide you don't rush.")
-    say(doc, "Two questions. One: where do people search in twenty-thirty-five? Mostly AI? Or still a mix with Google? That's the vertical axis. Top row, AI-first. Bottom row, hybrid, both still in daily use.")
-    say(doc, "Two: how do companies win? Website traffic and funnels? Or being mentioned and cited inside AI answers without a click? That's horizontal. Left, websites still matter for money. Right, zero-click influence.")
-    say(doc, "Four boxes. Top right: Citation Economy. Bottom right: Last-Click Web. Top left: Gatekeeper Web. Bottom left: Slow Adaptation.")
-    say(doc, "Say this out loud because Chermack wants to hear the logic: Funda pushed us up and to the right. Lorena kept us on hybrid and website value. SparkToro and SISTRIX gave us the scale on zero-click. That's how STEEP plus interviews became axes. Not SEO good versus SEO bad. That would've been lazy.")
+    # SLIDE 12
+    who(doc, "EMRAN", "8:30 - 9:30")
+    slide(doc, "Slide 12 - 2x2 matrix. SLOW DOWN.")
+    say(doc, "Emran. Two axes. Vertical: AI-first vs hybrid. Horizontal: website funnels vs zero-click influence. Four boxes. Funda pushed up-right. Lorena kept hybrid and website value. SparkToro and SISTRIX gave the scale.")
 
-    # SCENARIO 1 ARSHI
-    who(doc, "ARSHI", "8:15 - 9:15")
+    # SCENARIOS
+    who(doc, "ARSHI", "9:30 - 10:15")
     slide(doc, "Slide 13 - Citation Economy")
-    say(doc, "Scenario one. Citation Economy. Top right of the matrix.")
-    say(doc, "Picture twenty-thirty-five. You start research in ChatGPT or Copilot, not Google. Marketing teams stop fighting for blue link number one. They fight to get cited in the answer. Who owns the spec sheet AI keeps quoting? Who owns the case study?")
-    say(doc, "B2B actually does okay here if you publish real technical depth. Thin blog spam dies. Some publishers survive through licensing or being too niche to ignore.")
-    say(doc, "Warning signs you'd see early: job posts saying GEO instead of SEO. More people saying ChatGPT is step one at work. EU click numbers keep sliding.")
+    say(doc, "Arshi. Top right. AI is the front door. Win by being the source AI quotes. B2B depth wins; thin blogs die. Early signs: GEO job posts, ChatGPT step one at work.")
 
-    # SCENARIO 2 ASHIK
-    who(doc, "ASHIK", "9:15 - 10:15")
+    who(doc, "ASHIK", "10:15 - 11:00")
     slide(doc, "Slide 14 - Last-Click Web")
-    say(doc, "Scenario two. Last-Click Web. Bottom right.")
-    say(doc, "AI changed things but the website didn't die for sales. People use Google and AI for different jobs. Ask ChatGPT for an overview, Google a vendor, click through when you're actually buying.")
-    say(doc, "SEO looks more like what Lorena said. Trust, structure, proof, fast sites. Not stuffing keywords. Annoying future maybe, but workable. A lot of B2B still gets pipeline from organic if the query is commercial enough.")
+    say(doc, "Ashik. Bottom right. AI for overview, Google when buying. SEO becomes trust, structure, proof — Lorena's world. Annoying but workable.")
 
-    # SCENARIO 3 OZLEM
-    who(doc, "OZLEM", "10:15 - 11:15")
+    who(doc, "OZLEM", "11:00 - 11:45")
     slide(doc, "Slide 15 - Gatekeeper Web")
-    say(doc, "Scenario three. Gatekeeper Web. Top left. This one's the one that scares me.")
-    say(doc, "AI runs discovery but companies still build everything around website funnels because that's how CRM and boards think. Users don't come. You rank, sort of, but invisibly. Platforms charge for visibility. Funda warned us about gatekeepers. This is that world fully grown up.")
-    say(doc, "Small publishers and smaller B2B brands get squeezed. You show up in an answer maybe, but analytics say nothing. Dark influence.")
+    say(doc, "Ozlem. Top left. Most concerning. AI runs discovery but boards still want website KPIs. You rank invisibly. Funda's gatekeeper fear at scale.")
 
-    # SCENARIO 4 WASAY
-    who(doc, "WASAY", "11:15 - 12:15")
-    slide(doc, "Slide 16 - Slow Adaptation")
-    say(doc, "Wasay. Scenario four. Slow Adaptation. Bottom left.")
-    say(doc, "Honestly this feels like the most realistic boring future. Everyone knows the old SEO playbook is broken. Nobody replaces it cleanly. Zero-click creeps up. Teams keep hiring content volume. Agencies rebrand SEO and sell fear.")
-    say(doc, "Google still matters. AI still matters. Funda and Lorena both exist in the same company and confuse the strategy deck. Survivors are the ones who experimented early, even messily.")
+    who(doc, "WASAY", "11:45 - 12:30")
+    slide(doc, "Slides 16-17 - Slow Adaptation + reflection section")
+    say(doc, "Wasay. Bottom left. Most plausible boring future. Old playbook broken, no clean replacement. Zero-click creeps up. Funda and Lorena coexist in the same company. Now we reflect.")
 
     # REFLECTION
-    who(doc, "EMRAN", "12:15 - 13:30")
+    who(doc, "EMRAN", "12:30 - 13:30")
     slide(doc, "Slide 18 - Reflection")
-    say(doc, "Chermack asks three things at the end. We tried to answer them straight.")
-    say(doc, "Most plausible? Slow Adaptation. Data pressure is real. People change habits slowly. Big companies don't pivot clean.")
-    say(doc, "Most worrying? Gatekeeper Web. Power concentrated in a few platforms is not a tech detail. It's a business risk.")
-    say(doc, "What would we do? Stop treating SEO like one skill. Learn discovery strategy. Citations, structure, authority, metrics that aren't only clicks.")
-    say(doc, "Quick round. One line each.")
+    say(doc, "Emran hosts. Most plausible: Slow Adaptation. Most worrying: Gatekeeper Web. What we'd do: discovery strategy, not SEO alone.")
+    say(doc, "Quick round — one line each.")
 
     who(doc, "ARSHI", "13:30")
-    say(doc, "I'd tell a client to pick which box they're betting on before the traffic cliff, not after.")
+    say(doc, "Pick which box you're betting on before the traffic cliff.")
 
     who(doc, "ASHIK", "13:40")
-    say(doc, "I'd cut generic content spend and put money into expert content and technical setup.")
+    say(doc, "Cut generic content; invest in expert content and technical setup.")
 
     who(doc, "OZLEM", "13:50")
-    say(doc, "I'd keep talking to people like Funda and Lorena every year. Practitioners see it before the dashboard.")
+    say(doc, "Keep talking to practitioners every year.")
 
     who(doc, "WASAY", "14:00")
-    say(doc, "I'd measure AI visibility somehow, not only Search Console.")
+    say(doc, "Measure AI visibility, not only Search Console.")
 
     who(doc, "EMRAN", "14:10 - 15:00")
-    slide(doc, "Slide 19 - Thank you / sources")
-    say(doc, "Sources on the slide: SparkToro, SISTRIX, Gartner, Chermack, our two interviews.")
-    say(doc, "We prepared with Chermack. We explored with STEEP and stakeholder voices. We built four scenarios with early warnings. They're tools for thinking, not fortune telling.")
-    say(doc, "Thanks for watching. Happy to take questions.")
+    slide(doc, "Slide 19 - Thank you")
+    say(doc, "Thanks for watching. SparkToro, SISTRIX, Gartner, Chermack, our interviews. Questions welcome.")
 
     doc.add_paragraph()
     say(doc, "Recording tips: don't read word-for-word if it sounds stiff. Look at the camera on the matrix slide. All five faces visible at least once. Total time 14-16 minutes is fine.")

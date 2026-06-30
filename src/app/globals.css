@@ -312,6 +312,24 @@ body {
   border-radius: inherit;
 }
 
+.slide-speaker {
+  position: absolute;
+  top: 14px;
+  right: var(--slide-pad-x);
+  z-index: 5;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--teal);
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(10, 124, 120, 0.2);
+  box-shadow: 0 2px 8px rgba(18, 20, 30, 0.06);
+  pointer-events: none;
+}
+
 .slide-viewport {
   position: relative;
   z-index: 10;

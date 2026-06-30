@@ -29,3 +29,5 @@ Open [http://localhost:3000](http://localhost:3000) → press **F** for fullscre
 ## Recording
 
 Share the browser tab in Zoom/Teams. Press **F** first for clean fullscreen.
+
+**Speaker assignments:** see [SPEAKER_ASSIGNMENTS.md](./SPEAKER_ASSIGNMENTS.md) — each slide shows the speaker name top-right.

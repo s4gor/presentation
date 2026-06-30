@@ -1,5 +1,6 @@
 "use client";
 
+import { speakerForSlide } from "@/components/slides/speakers";
 import { motion } from "framer-motion";
 import { type ReactNode } from "react";
 
@@ -20,14 +21,18 @@ export function SlideShell({
   index,
   total,
   center,
+  speaker,
 }: {
   children: ReactNode;
   index: number;
   total: number;
   center?: boolean;
+  speaker?: string;
 }) {
+  const who = speaker ?? speakerForSlide(index);
   return (
     <div className="slide-root">
+      {who && <span className="slide-speaker">{who}</span>}
       <motion.div
         className={`slide-inner${center ? " slide-inner--center" : ""}`}
         variants={stagger}
