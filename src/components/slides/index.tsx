@@ -376,7 +376,7 @@ export function ThankYouSlide({ index, total }: P) {
       <div style={{ textAlign: "center" }}>
         <Eyebrow>Horizon 2035</Eyebrow>
         <DisplayTitle>Thank you</DisplayTitle>
-        <Subtitle>Prof. Dr. Peter Weber · Questions welcome</Subtitle>
+        <Subtitle>Prof. Dr. Peter Weber</Subtitle>
         <div className="thank-tags">
           {["Chermack", "SparkToro", "SISTRIX", "Gartner", "Aydin", "Contreras"].map((s) => <Tag key={s}>{s}</Tag>)}
         </div>
