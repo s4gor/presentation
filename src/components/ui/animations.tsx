@@ -62,6 +62,7 @@ export function TypewriterText({
   showCursor = true,
   className = "",
   as: Tag = "span",
+  delay = 0,
 }: {
   text: string;
   speed?: number;
@@ -69,10 +70,27 @@ export function TypewriterText({
   showCursor?: boolean;
   className?: string;
   as?: "span" | "p";
+  delay?: number;
 }) {
   const reduced = useReducedMotion();
-  const display = useTypewriter(text, reduced ? 0 : speed, active);
-  const typing = !reduced && active && display.length < text.length;
+  const [started, setStarted] = useState(reduced || delay === 0);
+
+  useEffect(() => {
+    if (!active || reduced) {
+      setStarted(reduced || delay === 0);
+      return;
+    }
+    if (delay === 0) {
+      setStarted(true);
+      return;
+    }
+    setStarted(false);
+    const t = window.setTimeout(() => setStarted(true), delay);
+    return () => window.clearTimeout(t);
+  }, [active, delay, reduced]);
+
+  const display = useTypewriter(text, reduced ? 0 : speed, active && started);
+  const typing = !reduced && active && started && display.length < text.length;
 
   return (
     <Tag className={className}>

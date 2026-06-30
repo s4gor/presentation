@@ -189,6 +189,45 @@ export function DriverTags({ items, grid }: { items: string[]; grid?: boolean })
   );
 }
 
+export function DriversAxisFrame({ drivers }: { drivers: string[] }) {
+  return (
+    <div className="drivers-axis-frame">
+      <p className="drivers-axis-frame__caption">Two critical uncertainties — four scenarios on the matrix</p>
+      <div className="drivers-axis-frame__body">
+        <div className="drivers-axis-frame__layout">
+          <div className="drivers-axis-frame__y-axis" aria-hidden>
+            <span className="drivers-axis-frame__y-end">AI-native</span>
+            <div className="drivers-axis-frame__y-line" />
+            <span className="drivers-axis-frame__y-end">Hybrid</span>
+          </div>
+          <div className="drivers-axis-frame__core">
+            <p className="drivers-axis-frame__axis-title drivers-axis-frame__axis-title--y">Axis 1 · Discovery</p>
+            <div className="drivers-axis-frame__plot">
+              <div className="drivers-axis-frame__crosshair" aria-hidden />
+              <span className="drivers-axis-frame__hub">2035</span>
+            </div>
+            <div className="drivers-axis-frame__x-axis" aria-hidden>
+              <span>Website funnels</span>
+              <span>Zero-click influence</span>
+            </div>
+            <p className="drivers-axis-frame__axis-title drivers-axis-frame__axis-title--x">Axis 2 · Value capture</p>
+          </div>
+        </div>
+        <div className="drivers-axis-frame__drivers">
+          <p className="drivers-axis-frame__drivers-label">Critical drivers</p>
+          <ul className="drivers-axis-frame__list">
+            {drivers.map((item, i) => (
+              <motion.li key={item} custom={i} initial="hidden" animate="visible" variants={fade}>
+                {item}
+              </motion.li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export function DriversMatrixHint() {
   const rows = [
     [

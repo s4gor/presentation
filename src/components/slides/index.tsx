@@ -2,9 +2,7 @@
 
 import { HookSlide } from "@/components/slides/HookSlide";
 import {
-  AxisSpectrum,
-  DriverTags,
-  DriversMatrixHint,
+  DriversAxisFrame,
   GivensChart,
   MethodologyPhases,
   OpenWebSplit,
@@ -192,12 +190,12 @@ export function SteepSlide({ index, total }: P) {
 
 export function GivensSlide({ index, total }: P) {
   const drivers = [
-    "S2 · AI-first vs hybrid",
-    "T2 · CTR compression",
-    "T3 · Gartner −25%",
-    "E2 · Publisher attrition",
-    "P1/P2 · DMA & AI rules",
-    "En1 · Energy ceiling",
+    "AI-first vs hybrid search behaviour",
+    "CTR 27% → 11% when AI Overview shows",
+    "Gartner −25% search volume by 2026",
+    "Publisher attrition & licensing pressure",
+    "EU DMA & AI accuracy regulation",
+    "Energy ceiling on AI infrastructure",
   ];
   return (
     <SlideShell index={index} total={total}>
@@ -209,18 +207,8 @@ export function GivensSlide({ index, total }: P) {
             <GivensChart />
           </Card>
           <Card accentColor="var(--blue)" className="drivers-card">
-            <CardTitle color="blue">Drivers — feed the 2×2 matrix</CardTitle>
-            <div className="drivers-card__body">
-              <div className="drivers-axes-row">
-                <AxisSpectrum tone="teal" label="Axis 1 · Discovery" left="AI-native" right="Hybrid" />
-                <AxisSpectrum tone="gold" label="Axis 2 · Value" left="Funnels" right="Zero-click" />
-              </div>
-              <DriversMatrixHint />
-              <div className="drivers-card__tags">
-                <p className="driver-tags__heading">Critical drivers</p>
-                <DriverTags grid items={drivers} />
-              </div>
-            </div>
+            <CardTitle color="blue">Drivers — become the two axes</CardTitle>
+            <DriversAxisFrame drivers={drivers} />
           </Card>
         </SlideMain>
       </SlideBody>
@@ -257,8 +245,10 @@ export function DataSlide({ index, total }: P) {
 }
 
 export function InterviewSlide({
-  index, total, name, role, quote, insights, initials, tagline, animateInsight,
-}: P & { name: string; role: string; quote: string; insights: string[]; initials: string; tagline: string; animateInsight?: number }) {
+  index, total, name, role, quote, insights, initials, tagline,
+}: P & { name: string; role: string; quote: string; insights: string[]; initials: string; tagline: string }) {
+  const insightSpeed = 18;
+
   return (
     <SlideShell index={index} total={total}>
       <SlideBody className="interview-slide-body">
@@ -275,7 +265,14 @@ export function InterviewSlide({
                 {insights.map((item, i) => (
                   <li key={item}>
                     <span className="slide-list__num">{i + 1}</span>
-                    <span>{animateInsight === i ? <TypewriterText text={item} speed={18} as="span" showCursor={false} /> : item}</span>
+                    <span>
+                      <TypewriterText
+                        text={item}
+                        speed={insightSpeed}
+                        as="span"
+                        showCursor={false}
+                      />
+                    </span>
                   </li>
                 ))}
               </ul>
@@ -404,14 +401,14 @@ export function getSlideComponent(slideIndex: number, total: number) {
         <InterviewSlide {...p} name="Funda Aydin" role="Marketing · GEA Digital · 17 Jun 2026"
           quote="Companies need to optimize for being cited, selected, and trusted by AI systems — not just for being clicked in search results."
           insights={["ChatGPT is her #1 work tool — shift from Google over ~2 years", "Checks sources for technical, legal & financial queries", "B2B still needs deep technical content — consumption moves to AI", "Fear: few AI platforms become gatekeepers of visibility"]}
-          initials="FA" tagline="Axis 1 up · Axis 2 right — AI-first + citations" animateInsight={0} />
+          initials="FA" tagline="Axis 1 up · Axis 2 right — AI-first + citations" />
       );
     case 10:
       return (
         <InterviewSlide {...p} name="Lorena Contreras" role="Community manager · SEO background · 18 Jun 2026"
           quote="Users may get the information without clicking on the company website — even if the content helped to create the answer."
           insights={["Google first for known-intent; ChatGPT for writing & structuring", "Attribution paradox: your content builds the AI answer, no visit", "Expert cases & data survive; generic keyword blogs lose value", "Would invest in original insights — not mass-produced articles"]}
-          initials="LC" tagline="Axis 1 down · hybrid + website value tension" animateInsight={0} />
+          initials="LC" tagline="Axis 1 down · hybrid + website value tension" />
       );
     case 11: return <SectionHero {...p} num="02" title="The four scenarios" subtitle="2×2 matrix · narratives from 2035 · early warnings" />;
     case 12: return <MatrixSlide {...p} />;
